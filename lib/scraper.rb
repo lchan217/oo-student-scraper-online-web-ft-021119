@@ -22,8 +22,8 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
    
-    main = doc.css('.social-icon-container')
-    nodes = main.css('a[href]')
+    
+    nodes = doc.css('.social-icon-container').css('a[href]')
     student_hash = {}
     nodes.each do |x|
    
