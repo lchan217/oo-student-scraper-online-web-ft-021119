@@ -12,7 +12,10 @@ class Student
   end
   
   def self.create_from_collection(students_array)
-    binding.pry
+    students_array.map do |student|
+      student.name = name 
+      student.location = location
+    end 
   end
 
   def add_student_attributes(attributes_hash)
