@@ -47,7 +47,7 @@ class Scraper
 
 end
 
-
+#3/5 office hours
  #   if main.css('a[href*="twitter"]').first != nil
     #     student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
     #   end
