@@ -23,6 +23,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
    
     main = doc.css('.social-icon-container')
+    nodes = main.css
     student_hash = {}
     main.map do |x|
       if main.css('a[href*="twitter"]').first.values.join.include?("twitter")
