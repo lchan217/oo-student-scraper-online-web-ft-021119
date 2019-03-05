@@ -28,11 +28,11 @@ class Scraper
     main.map do |x|
       if main.css('a[href*="twitter"]').first.values.join.include?("twitter")
         student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
-      end
-      if main.css('a[href*="linkedin"]').first.values.join.include?("linkedin")
+      
+      elsif main.css('a[href*="linkedin"]').first.values.join.include?("linkedin")
         student_hash[:linkedin] = main.css('a[href*="linkedin"]').first.values.join
       end
-      elsif main.css('a[href*="github"]').first.values.join.include?("github")
+      if main.css('a[href*="github"]').first.values.join.include?("github")
         student_hash[:github] = main.css('a[href*="github"]').first.values.join
       end
       if main.css('a[href]')[3].values != "#" 
