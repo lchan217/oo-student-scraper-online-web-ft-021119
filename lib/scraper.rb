@@ -30,10 +30,10 @@ class Scraper
       if main.css('a[href*="twitter"]').first != nil
         student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
       end
-      if main.css('a[href*="linkedin"]').first.values.join.include?("linkedin")
+      if main.css('a[href*="linkedin"]').first != nil
         student_hash[:linkedin] = main.css('a[href*="linkedin"]').first.values.join
       end
-      if main.css('a[href*="github"]').first.values.join.include?("github")
+      if main.css('a[href*="github"]').first != nil
         student_hash[:github] = main.css('a[href*="github"]').first.values.join
       end
       if main.css('a[href]')[3].values != "#" 
