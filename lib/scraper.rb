@@ -40,12 +40,12 @@ class Scraper
     #   end
       if x.first.join.include?('twitter')
         student_hash[:twitter] = x.first.join
-        elsif x.first.values.join.include?('linkedin')
-        student_hash[:linkedin] = x.first.values.join
-        elsif x.first.values.join.include?('github')
-        student_hash[:github] = x.first.values.join
-        elsif !(x.first.values.join.include?('#'))
-        student_hash[:blog] = x.first.values.join
+        elsif x.first.join.include?('linkedin')
+        student_hash[:linkedin] = x.first.join
+        elsif x.first.join.include?('github')
+        student_hash[:github] = x.first.join
+        elsif !(x.first.join.include?('#'))
+        student_hash[:blog] = x.first.join
       end
     end 
     student_hash[:profile_quote] = doc.css('.profile-quote').text
