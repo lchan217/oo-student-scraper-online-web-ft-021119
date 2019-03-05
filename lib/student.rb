@@ -19,7 +19,7 @@ class Student
 
   def add_student_attributes(attributes_hash)
     attributes_hash.each do |symbol|
-      binding.pry
+      attributes_hash[symbol[0]] = symbol[1]
     end 
   end
 
