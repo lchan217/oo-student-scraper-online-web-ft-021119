@@ -38,7 +38,16 @@ class Scraper
     #   if main.css('a[href]')[].values != "#" 
     #     student_hash[:blog] = main.css('a[href]')[-1].values.join
     #   end
-    # end 
+      if x.first.values.join.include?('twitter')
+        student_hash[:twitter] = x.first.values.join
+        elsif x.first.values.join.include?('linkedin')
+        student_hash[:linkedin] = x.first.values.join
+        elsif x.first.values.join.include?('github')
+        student_hash[:github] = x.first.values.join
+        elsif !(x.first.values.join.include?('#'))
+        student_hash[:blog] = x.first.values.join
+      end
+    end 
     student_hash[:profile_quote] = doc.css('.profile-quote').text
     
     student_hash[:bio] = doc.css("div.bio-content p").text
