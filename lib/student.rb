@@ -17,6 +17,10 @@ class Student
       student.location = location
     end 
   end
+  
+  def name=(name)
+    @name = name 
+  end 
 
   def add_student_attributes(attributes_hash)
     
