@@ -39,7 +39,7 @@ class Scraper
     #     student_hash[:blog] = main.css('a[href]')[-1].values.join
     #   end
       if x.first.values.join.include?('twitter')
-        student_hash[:twitter] = x.first.values.join
+        student_hash[:twitter] = x.first.join
         elsif x.first.values.join.include?('linkedin')
         student_hash[:linkedin] = x.first.values.join
         elsif x.first.values.join.include?('github')
