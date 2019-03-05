@@ -25,6 +25,7 @@ class Scraper
     main = doc.css('.social-icon-container')
     student_hash = {}
     main.map do |x|
+      binding.pry
       if main.css('a[href*="twitter"]').first.values.join.include?("twitter")
         student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join 
       elsif main.css('a[href*="linkedin"]').first.values.join.include?("linkedin")
@@ -37,7 +38,7 @@ class Scraper
     end 
     student_hash[:profile_quote] = main.css('.profile-quote').text
     student_hash[:bio] = doc.css("div.bio-content p").text
-    binding.pry
+    #binding.pry
     student_hash
   end
 
