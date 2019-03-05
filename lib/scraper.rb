@@ -40,13 +40,13 @@ class Scraper
     #   end
       if x.first.join.include?('twitter')
         binding.pry
-        student_hash[:twitter] = x.first.value.join
+        student_hash[:twitter] = x.first[1]
         elsif x.first.join.include?('linkedin')
-        student_hash[:linkedin] = x.first.join
+        student_hash[:linkedin] = x.first[1]
         elsif x.first.join.include?('github')
-        student_hash[:github] = x.first.join
+        student_hash[:github] = x.first[1]
         elsif !(x.first.join.include?('#'))
-        student_hash[:blog] = x.first.join
+        student_hash[:blog] = x.first[1]
       end
     end 
     student_hash[:profile_quote] = doc.css('.profile-quote').text
