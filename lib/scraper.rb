@@ -42,6 +42,7 @@ class Scraper
     
     student_hash[:bio] = doc.css("div.bio-content p").text
     student_hash
+    binding.pry
   end
 
 end
