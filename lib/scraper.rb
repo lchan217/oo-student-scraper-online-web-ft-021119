@@ -26,7 +26,7 @@ class Scraper
     #nodes = main.css('a[href]')
     student_hash = {}
     main.map do |x|
-      binding.pry
+      #binding.pry
       if main.css('a[href*="twitter"]').first != nil
         student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
       end
