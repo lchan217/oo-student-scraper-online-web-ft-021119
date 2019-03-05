@@ -32,7 +32,7 @@ class Scraper
       if main.css('a[href*="linkedin"]').first.values.join.include?("linkedin")
         student_hash[:linkedin] = main.css('a[href*="linkedin"]').first.values.join
       end
-      if main.css('a[href*="github"]').first.values.join.include?("github")
+      elsif main.css('a[href*="github"]').first.values.join.include?("github")
         student_hash[:github] = main.css('a[href*="github"]').first.values.join
       end
       if main.css('a[href]')[3].values != "#" 
