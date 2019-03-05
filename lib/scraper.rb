@@ -35,8 +35,8 @@ class Scraper
       if main.css('a[href*="github"]').first.values.join.include?("github")
         student_hash[:github] = main.css('a[href*="github"]').first.values.join
       end
-      if main.css('a[href]') != "#" 
-        student_hash[:blog] = main.css('a[href]')
+      if main.css('a[href]')[3].values != "#" 
+        student_hash[:blog] = main.css('a[href]')[3].values
       end
     end 
     student_hash[:profile_quote] = main.css('.profile-quote').text
