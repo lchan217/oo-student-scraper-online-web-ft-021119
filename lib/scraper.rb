@@ -39,7 +39,8 @@ class Scraper
         student_hash[:blog] = main.css('a[href]')[3].values
       end
     end 
-    student_hash[:profile_quote] = main.css('.profile-quote').text
+    student_hash[:profile_quote] = doc.css('.profile-quote').text
+    
     student_hash[:bio] = doc.css("div.bio-content p").text
     binding.pry
     student_hash
