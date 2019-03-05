@@ -40,7 +40,7 @@ class Scraper
     #   end
       if x.first.join.include?('twitter')
         binding.pry
-        student_hash[:twitter] = x.first.join
+        student_hash[:twitter] = x.first.value.join
         elsif x.first.join.include?('linkedin')
         student_hash[:linkedin] = x.first.join
         elsif x.first.join.include?('github')
