@@ -26,18 +26,7 @@ class Scraper
     nodes = main.css('a[href]')
     student_hash = {}
     nodes.each do |x|
-    #   if main.css('a[href*="twitter"]').first != nil
-    #     student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
-    #   end
-    #   if main.css('a[href*="linkedin"]').first != nil
-    #     student_hash[:linkedin] = main.css('a[href*="linkedin"]').first.values.join
-    #   end
-    #   if main.css('a[href*="github"]').first != nil
-    #     student_hash[:github] = main.css('a[href*="github"]').first.values.join
-    #   end
-    #   if main.css('a[href]')[].values != "#" 
-    #     student_hash[:blog] = main.css('a[href]')[-1].values.join
-    #   end
+   
       if x.first.join.include?('twitter')
 
         student_hash[:twitter] = x.first[1]
@@ -57,4 +46,18 @@ class Scraper
   end
 
 end
+
+
+ #   if main.css('a[href*="twitter"]').first != nil
+    #     student_hash[:twitter] =  main.css('a[href*="twitter"]').first.values.join
+    #   end
+    #   if main.css('a[href*="linkedin"]').first != nil
+    #     student_hash[:linkedin] = main.css('a[href*="linkedin"]').first.values.join
+    #   end
+    #   if main.css('a[href*="github"]').first != nil
+    #     student_hash[:github] = main.css('a[href*="github"]').first.values.join
+    #   end
+    #   if main.css('a[href]')[].values != "#" 
+    #     student_hash[:blog] = main.css('a[href]')[-1].values.join
+    #   end
 
