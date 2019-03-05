@@ -36,7 +36,6 @@ class Scraper
         student_hash[:github] = x.first[1]
         elsif !(x.first.join.include?('#'))
         student_hash[:blog] = x.first[1]
-        binding.pry
       end
     end 
     student_hash[:profile_quote] = doc.css('.profile-quote').text
