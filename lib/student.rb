@@ -12,9 +12,7 @@ class Student
   end
   
   def self.create_from_collection(students_array)
-    students_array.map do |student|
-      student.name = name 
-      student.location = location
+    students_array.map do |student|n
     end 
   end
 
